@@ -4,9 +4,9 @@ Hello! Welcome to my little quickstart guide on getting started in AWS! The purp
 
 We will cover the following topics:
 
-1. [Creating an AWS root account (with MFA)](#1.-Creating-an-AWS-root-account)
-2. [Creating a new user in Identity and Access Management (IAM)](#2.-Creating-a-new-user-in-IAM)
-3. [Talking about AWS free tier](#3.-AWS-Free-Tier)
+1. [Creating an AWS root account (with MFA)](#1-Creating-an-AWS-root-account)
+2. [Creating a new user in Identity and Access Management (IAM)](#2-Creating-a-new-user-in-IAM)
+3. [Talking about AWS free tier](#3-AWS-Free-Tier)
 
 ## 1. Creating an AWS root account
 
