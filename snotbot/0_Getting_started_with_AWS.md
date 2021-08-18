@@ -76,3 +76,7 @@ To log in with your new admin account, open a new window in a different browser 
 ![create user page 4](images/2_5_sign_in_user.png)
 
 ## 3. AWS Free Tier
+
+Whenever you use a service in AWS, you will often be charged for the duration the service is used, which is called pay as you go pricing. For people who are new to AWS, there is a "free tier" which can be leveraged. What does this mean?
+
+[AWS free tier](https://aws.amazon.com/free) provides the ability for new customers to explore and try out different services, without being charged up to a certain limit. AWS free tier is only available on an AWS account for the first 12 months after the account's creation. For a complete breakdown of all services available in the free tier and what their limits are, please look at [this table](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=tier%2312monthsfree&awsf.Free%20Tier%20Categories=*all). If you are still unsure on whether the service you want to use has a free tier limit, I would recommend following one of the links at the end of the presentation to learn more about AWS.
