@@ -10,6 +10,8 @@ An Application Programming Interface (API) is a software component which allows 
 
 For an example, imagine you walk into a fish and chip shop. You previously ordered online and are there to pay pick up your order. Think of yourself as an application, the kitchen as another application and the person at the counter as the API. When you say I am here to pay and pick up my online order under Daniel, you are authenticating with the person at the counter. They look at the tickets behind the counter and see an order for Daniel, so they know who you are. Now queue the API call, you hand them the cash to pay for your order. The person behind the counter takes the money and puts it in the cash register and then goes into the kitchen (other application) to grab the payload (1 scoop of chips, 2 fish and 1 spring roll). They then come back out the front and give you the payload in return. You have now just successfully called an API to pass through data (paying with money), which triggered a payload to be created in the other application (kitchen) and received that payload in return (your dinner).
 
+If you wish to hit your API, a good tool to use is [Postman](https://www.postman.com/downloads/). It is simple to set up, easy to use and there is heaps of support online for it if you get stuck.
+
 ## Getting started
 
 For this getting started, we will create an API Gateway that sends a payload to an AWS Lambda once triggered.
