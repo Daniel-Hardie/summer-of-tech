@@ -6,8 +6,8 @@ First off, check out [Getting started with AWS](https://github.com/Daniel-Hardie
 
 Once you have an AWS account, feel free to learn more about any the following services used in Snotbot:
 
-- [Amazon API Gateway](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20API%20Gateway.md)
 - [AWS Lambda](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/AWS%20Lambda.md)
+- [Amazon API Gateway](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20API%20Gateway.md)
 - [Amazon Simple Queue Service](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20Simple%20Queue%20Service.md)
 - [Amazon Simple Email Service](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20Simple%20Email%20Service.md)
 - [Amazon Secrets Manager](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20Secrets%20Manager.md)

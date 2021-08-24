@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Amazon API Gateway](https://aws.amazon.com/api-gateway/) allows you to create APIs in AWS. The API Gateway is commonly used as a triggering point for some process, e.g. a payload is received by an API within the API Gateway and its cotents are then sent to another AWS service for processing.
+[Amazon API Gateway](https://aws.amazon.com/api-gateway/) allows you to create APIs in AWS. The API Gateway is commonly used as a triggering point for some process, e.g. a payload is received by an API within the API Gateway and its contents are then sent to another AWS service for processing.
 
 ## What is an API?
 
@@ -23,7 +23,7 @@ Prerequisites to getting started:
 
 To get started, in the AWS Console search for API Gateway in the search box and click on the top link to open the API Gateway service page. Upon the page loading click on the "Create API" button.
 
-At this point, you will then be prompted to pick the type of API you want to create. For the purpose of thie exercise, we want to pick the REST API type, which is probably the most common type of API used. Press the "Build" button on the non-private REST API type, as shown below:
+At this point, you will then be prompted to pick the type of API you want to create. For the purpose of thie exercise, we want to pick the [REST API](https://restfulapi.net/) type, which is probably the most common type of API used. Press the "Build" button on the non-private REST API type, as shown below:
 
 ![API Gateway REST API type](images/API_Gateway_1.png)
 

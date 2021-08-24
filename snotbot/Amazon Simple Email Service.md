@@ -75,6 +75,8 @@ def CreateAndSendEmail():
     else:
         print("Email sent! Message ID:"),
         print(response['MessageId'])
+
+CreateAndSendEmail()
 ```
 
 Going through, we first need to set up sender and recipient email addresses, where the recipients can be stored as a string list. Next we are declaring what AWS region the SES service we are using is in, which should ideally be in the same region as this lambda. Finally, we create the email contents that will be used in the email.

@@ -79,7 +79,7 @@ def sendSQSMessage():
 sendSQSMessage()
 ```
 
-Going through this code snippet, we need to first know your queue's URL, so overwrite the URL provided with your own. You can find this in the "Details" section of your queue in SQS. A payload has also been defined, which can be anything! We will just use the class "Hello World" for now. Next up, we will use the [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) library to create a reference to the SQS service. Boto3 is the Python AWS SDK, which allows us to invoke AWS commands through code, which is pretty cool! So by creating this client with SQS, we can basically use SQS functionality from within our lambda code.
+Going through this code snippet, we need to first know your queue's URL, so overwrite the URL provided with your own. You can find this in the "Details" section of your queue in SQS. A payload has also been defined, which can be anything! We will just use the string "Hello World" for now. Next up, we will use the [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) library to create a reference to the SQS service. Boto3 is the Python AWS SDK, which allows us to invoke AWS commands through code, which is pretty cool! So by creating this client with SQS, we can basically use SQS functionality from within our lambda code.
 
 After the client is set up, we then generate a random id so that we can use it to identify the message. FIFO has in built protections to stop duplicate messages, which use this id that we generate. Finally, we send a message to the queue with our paylaod and id and capture the message sent back.
 
@@ -111,7 +111,7 @@ This will redirect you to a new page, where you will need to select a trigger ty
 
 ![SQS Create Queue type](images/SQS_10.png)
 
-You will then be redirected to back to your lambda and you will notice tow things:
+You will then be redirected to back to your lambda and might notice two things:
 
 1. SQS now appears as a trigger in the Function overview
 2. In the Configuration section down below, you will see that it is "Creating" this trigger. Give this a minute or so to complete, it is pretty quick.
