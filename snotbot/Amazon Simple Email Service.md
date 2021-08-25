@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Amazon Simple Email Service](https://aws.amazon.com/ses/) (also known as Amazon SES) is Amazon's email service, which allows you to send emails.
+[Amazon Simple Email Service](https://aws.amazon.com/ses/) (also known as Amazon SES) is an AWS service that allows you to send emails.
 
 ## Getting started
 
@@ -10,10 +10,12 @@ For this getting started, we will use a lambda function with a Python runtime to
 
 Prerequisites:
 
-- You are logged in to the AWS Console with an account which has sysadmin privileges. If not and you are unsure how to do this, please follow through [Getting started with AWS](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Getting%20started%20with%20AWS.md) to set yourself up
-- You have created a lambda function with a Python runtime. If you have not yet done this, please head over to the [AWS Lambda page](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/AWS%20Lambda.md)
+- You are logged in to the AWS Console with an account which has sysadmin privileges. If not and you are unsure how to do this, please follow through [Getting started with AWS](./Getting%20started%20with%20AWS.md) to set yourself up
+- You have created a lambda function with a Python runtime. If you have not yet done this, please head over to the [AWS Lambda page](./AWS%20Lambda.md)
 
-If you think about what is required to send an email, you need a sender email, receiver email, email subject and email body. For starters, we will focus on the sender and receiver email addresses and how to get them set up in SES. To keep this tutorial simple, we will be using the bare bones of SES, which means that you first need to verify the sender and receiver email addresses in SES. This is because by default, SES is in "sandbox mode", which is how you test SES as a new user. This is not practical if you want to send emails to people and can't verify their email addresses, but to do this it costs extra to come out of sandbox mode. For the purposes of this tutorial, we will be only using sandbox mode.
+If you think about what is required to send an email, you need a sender email, receiver email, email subject and email body. For starters, we will focus on the sender and receiver email addresses and how to get them set up in SES. To keep this tutorial simple, we will be using the bare bones of SES, which means that you first need to verify the sender and receiver email addresses in SES. This is because by default, SES is in "sandbox mode", which is how you test SES as a new user. This is not practical if you want to send emails to people and can't verify their email addresses up front, but to do this costs extra as you need to come out of sandbox mode. For the purposes of this tutorial, we will be only using sandbox mode.
+
+To access SES, search for Amazon Simple Email Service in the services search, and select it from the results.
 
 To verify email addresses in SES is quite simple. Head over to the "Email Addresses" side menu option in the "Identity Management" section and press the "Verify a New Email Address" button, as shown below:
 
@@ -79,10 +81,10 @@ def CreateAndSendEmail():
 CreateAndSendEmail()
 ```
 
-Going through, we first need to set up sender and recipient email addresses, where the recipients can be stored as a string list. Next we are declaring what AWS region the SES service we are using is in, which should ideally be in the same region as this lambda. Finally, we create the email contents that will be used in the email.
+Going through, we first need to set up sender and recipient email addresses, where the recipients can be stored as a list of strings. Next, we are declaring what AWS region the SES service we are using is in, ideally, this should be in the same region as the lambda. Finally, we create the email contents/body.
 
-Stepping through the CreateAndSendEmail method (which should be split out into two seperate methods 🤫) we first create a reference to the SES service with client using Boto3. [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) is the Python AWS SDK, which allows us to invoke AWS commands through code, which is pretty cool! So by creating this client with SES, we can basically use SES functionality from within our lambda code.
+Stepping through the CreateAndSendEmail method (which should be split out into two seperate methods 🤫) we first create a reference to the SES service using the Boto3 client. [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) is the Python AWS SDK, which allows us to invoke AWS commands through code, which is pretty cool! So, by creating this SES client, we can use SES functionality from within our lambda code.
 
-After the client is set up, we then create the email and send it using the client. If we get a successful response from SES, we receive back a message id (which is printed out to [Amazon CloudWatch](https://github.com/Daniel-Hardie/summer-of-tech/blob/main/snotbot/Amazon%20CloudWatch.md)). If we do not get a successful response, the error is then printed out into the logs so we can investigate further to see what the problem is.
+After the client is set up, we create the email and then using the client, send the email. If we get a successful response from SES, we receive back a message id (which is printed out to [Amazon CloudWatch](./Amazon%20CloudWatch.md)). If we do not get a successful response, the error is then printed out into the logs so we can investigate further to see what the problem is.
 
 And just like that, you can now send emails from a lambda function using SES!
