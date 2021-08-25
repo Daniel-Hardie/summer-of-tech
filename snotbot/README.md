@@ -13,3 +13,5 @@ Once you have an AWS account, feel free to learn more about any the following se
 - [Amazon Secrets Manager](./Amazon%20Secrets%20Manager.md)
 - [Amazon CloudWatch](./Amazon%20CloudWatch.md)
 - [AWS Identity and Access Management](./AWS%20Identity%20and%20Access%20Management.md)
+
+Also check out the [Getting started in the Cloud resource links](./Getting%20started%20with%20AWS.md) if you want to learn more.
